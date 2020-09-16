@@ -9,10 +9,10 @@ import org.objectweb.asm.Opcodes;
 
 import java.util.ArrayList;
 
-public class ASM_Compiler {
+public class ASM_Compiler implements Opcodes {
 	public ASM_Compiler() {
 	}
-	
+
 	//https://www.beyondjava.net/quick-guide-writing-byte-code-asm
 	public byte[] generate(String name, int access, String superName, String[] interfaces, ArrayList<FieldNode> nodesF, ArrayList<MethodNode> nodesM) {
 		ClassWriter writer = new ClassWriter(Opcodes.ASM8);
